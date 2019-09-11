@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TÍnh tuổi</title>
+</head>
+<body>
+<script>
+    let namsinh = parseInt(prompt("Năm sinh"));
+    var n = new Date();
+    var year= n.getFullYear();
+
+    function tinhtuoi() {
+        let tuoi=0;
+        if (namsinh < year) {
+            tuoi= year - namsinh;
+            alert(tuoi)
+        }else {
+            alert("Không hợp lệ")
+        }
+    }
+    tinhtuoi()
+</script>
+</body>
+</html>

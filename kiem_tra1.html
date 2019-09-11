@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<p>Enter a number: <input type="text" id="num">
+    <input type="button" value="Show" onclick="number()">
+</p>
+<body>
+<script>
+
+    function songuyento(n) {
+
+        let check = true;
+
+        if (n < 2) {
+            return false
+        }
+        for (let i = 2; i < n; i++) {
+            if (n % i === 0) {
+                check = false
+            }
+        }
+        return check
+    }
+
+    function number() {
+        let number = Number(document.getElementById("num").value);
+        for (let i = 1; i < number; i++) {
+            if (songuyento(i) == true) {
+                document.write(i + ', ')
+            }
+        }
+
+    }
+
+
+</script>
+</body>
+</html>
